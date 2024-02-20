@@ -6,6 +6,27 @@
 //
 import UIKit
 
+public extension UIColor {
+    /// Initializes UIColor with hexadecimal string.
+    /// - Parameters:
+    ///   - hexString: The hexadecimal color string (e.g., "#RRGGBB" or "#RRGGBBAA").
+    ///   - alpha: The alpha value of the color (0.0 - 1.0). If the hexString includes alpha, this parameter is ignored.
+    convenience init(hexString: String, alpha: CGFloat = 1.0) {
+        var hexFormatted: String = hexString.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        hexFormatted = hexFormatted.replacingOccurrences(of: "#", with: "")
+        
+        var rgbValue: UInt64 = 0
+        Scanner(string: hexFormatted).scanHexInt64(&rgbValue)
+        
+        let red = CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0
+        let green = CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0
+        let blue = CGFloat(rgbValue & 0x0000FF) / 255.0
+        let alpha = hexFormatted.count == 8 ? CGFloat((rgbValue & 0xFF000000) >> 24) / 255.0 : alpha
+        
+        self.init(red: red, green: green, blue: blue, alpha: alpha)
+    }
+}
+
 // MARK: - Orange
 public extension UIColor {
     enum FlexColor {

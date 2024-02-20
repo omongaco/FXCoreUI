@@ -97,4 +97,15 @@ public extension UIView {
         isUserInteractionEnabled = true
         objc_setAssociatedObject(self, String(format: "[%d]", Int.random(in: 0..<Int.max)), sleeve, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
     }
+    
+    func findParentViewController() -> UIViewController? {
+        var responder: UIResponder? = self
+        while let nextResponder = responder?.next {
+            if let viewController = nextResponder as? UIViewController {
+                return viewController
+            }
+            responder = nextResponder
+        }
+        return nil
+    }
 }
