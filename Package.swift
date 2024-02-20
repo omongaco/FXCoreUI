@@ -17,8 +17,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/airbnb/lottie-spm.git", 
                  from: "4.3.4"),
-        .package(path: "../../Common/FXCore")
-        
+        .package(url: "https://github.com/ApricodeMembangunNegeri/FXCore.git", .upToNextMajor(from: "1.0.0"))
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
