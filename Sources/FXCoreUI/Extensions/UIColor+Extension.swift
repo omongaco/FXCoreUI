@@ -61,15 +61,17 @@ public extension UIColor.FlexColor {
 }
 
 public extension UIColor.FlexColor {
-    static let pepper100     = #colorLiteral(red: 0.9764705882, green: 0.9254901961, blue: 0.9254901961, alpha: 1)
-    static let pepper200     = #colorLiteral(red: 0.9529411765, green: 0.8509803922, blue: 0.8470588235, alpha: 1)
-    static let pepper300     = #colorLiteral(red: 0.9254901961, green: 0.7803921569, blue: 0.7725490196, alpha: 1)
-    static let pepper400     = #colorLiteral(red: 0.8745098039, green: 0.6352941176, blue: 0.6235294118, alpha: 1)
-    static let pepper500     = #colorLiteral(red: 0.8470588235, green: 0.5607843137, blue: 0.5529411765, alpha: 1)
-    static let pepper600     = #colorLiteral(red: 0.8196078431, green: 0.4901960784, blue: 0.4784313725, alpha: 1)
-    static let pepper700     = #colorLiteral(red: 0.7921568627, green: 0.4196078431, blue: 0.4078431373, alpha: 1)
-    static let pepper800     = #colorLiteral(red: 0.7647058824, green: 0.3490196078, blue: 0.3333333333, alpha: 1)
-    static let pepper900     = #colorLiteral(red: 0.737254902, green: 0.2784313725, blue: 0.262745098, alpha: 1)
+    // Replace the placeholder values with the actual color values you obtain from your color picker
+    static let pepper100       = #colorLiteral(red: 0.9764705882, green: 0.9254901961, blue: 0.9254901961, alpha: 1) // Replace with actual 10% shade RGB values
+    static let pepper200       = #colorLiteral(red: 0.9529411765, green: 0.8509803922, blue: 0.8470588235, alpha: 1) // Replace with actual 20% shade RGB values
+    static let pepper300       = #colorLiteral(red: 0.9254901961, green: 0.7803921569, blue: 0.7725490196, alpha: 1) // Replace with actual 30% shade RGB values
+    static let pepper400       = #colorLiteral(red: 0.8745098039, green: 0.6352941176, blue: 0.6235294118, alpha: 1) // Replace with actual 40% shade RGB values
+    static let pepper500       = #colorLiteral(red: 0.8470588235, green: 0.5607843137, blue: 0.5529411765, alpha: 1) // Replace with actual 50% shade RGB values
+    static let pepper600       = #colorLiteral(red: 0.8196078431, green: 0.4901960784, blue: 0.4784313725, alpha: 1) // Replace with actual 60% shade RGB values
+    static let pepper700       = #colorLiteral(red: 0.7921568627, green: 0.4196078431, blue: 0.4078431373, alpha: 1) // Replace with actual 70% shade RGB values
+    static let pepper800       = #colorLiteral(red: 0.7647058824, green: 0.3490196078, blue: 0.3333333333, alpha: 1) // Replace with actual 80% shade RGB values
+    static let pepper900       = #colorLiteral(red: 0.791729817, green: 0.2784313725, blue: 0.262745098, alpha: 1) // Replace with actual 90% shade RGB values
+    static let pepperBase      = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1) // Replace with actual base color RGB values
 }
 
 // MARK: - Yellow
