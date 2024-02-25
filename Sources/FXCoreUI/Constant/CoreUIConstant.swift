@@ -9,18 +9,33 @@ import Foundation
 
 public enum CoreUIConstant {
     public enum Font {
-        public static let interBlack = "Inter-Black"
-        public static let interBold = "Inter-Bold"
-        public static let interExtraBold = "Inter-ExtraBold"
-        public static let interExtraLight = "Inter-ExtraLight"
-        public static let interLight = "Inter-Light"
-        public static let interMedium = "Inter-Medium"
-        public static let interRegular = "Inter-Regular"
-        public static let interSemiBold = "Inter-SemiBold"
-        public static let interThin = "Inter-Thin"
+        public static let black = "Poppins-Black"
+        public static let blackItalic = "Poppins-BlackItalic"
+        public static let bold = "Poppins-Bold"
+        public static let boldItalic = "Poppins-BoldItalic"
+        public static let extraBold = "Poppins-ExtraBold"
+        public static let extraBoldItalic = "Poppins-ExtraBoldItalic"
+        public static let extraLight = "Poppins-ExtraLight"
+        public static let extraLightItalic = "Poppins-ExtraLightItalic"
+        public static let italic = "Poppins-Italic"
+        public static let light = "Poppins-Light"
+        public static let lightItalic = "Poppins-LightItalic"
+        public static let medium = "Poppins-Medium"
+        public static let mediumItalic = "Poppins-MediumItalic"
+        public static let regular = "Poppins-Regular"
+        public static let semiBold = "Poppins-SemiBold"
+        public static let semiBoldItalic = "Poppins-SemiBoldItalic"
+        public static let thin = "Poppins-Thin"
+        public static let thinItalic = "Poppins-ThinItalic"
     }
     
     public enum FontSize {
+        public static let logo1: CGFloat = 48
+        public static let logo2: CGFloat = 40
+        public static let logo3: CGFloat = 32
+        public static let logo4: CGFloat = 24
+        public static let logo5: CGFloat = 16
+        
         public static let headline0ExtraBold: CGFloat = 32
         public static let headline1ExtraBold: CGFloat = 28
         public static let headline2Bold: CGFloat = 24

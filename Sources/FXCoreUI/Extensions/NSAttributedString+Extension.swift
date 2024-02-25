@@ -530,9 +530,97 @@ public extension NSAttributedString {
     }
 }
 
+// MARK: - Logo
+public extension NSAttributedString {
+    static func logo1(
+        _ text: String,
+        alignment: NSTextAlignment = .left,
+        additionalAttribute: [NSAttributedString.Key: Any]? = nil,
+        additionalRange: NSRange? = nil
+    ) -> NSAttributedString {
+        generateAttribute(
+            text: text,
+            font: .logo1,
+            lineHeightMultiplier: 1.4,
+            alignment: alignment,
+            additionalAttribute: additionalAttribute,
+            additionalRange: additionalRange,
+            isUnderline: true
+        )
+    }
+    
+    static func logo2(
+        _ text: String,
+        alignment: NSTextAlignment = .left,
+        additionalAttribute: [NSAttributedString.Key: Any]? = nil,
+        additionalRange: NSRange? = nil
+    ) -> NSAttributedString {
+        generateAttribute(
+            text: text,
+            font: .logo2,
+            lineHeightMultiplier: 1.4,
+            alignment: alignment,
+            additionalAttribute: additionalAttribute,
+            additionalRange: additionalRange,
+            isUnderline: true
+        )
+    }
+    
+    static func logo3(
+        _ text: String,
+        alignment: NSTextAlignment = .left,
+        additionalAttribute: [NSAttributedString.Key: Any]? = nil,
+        additionalRange: NSRange? = nil
+    ) -> NSAttributedString {
+        generateAttribute(
+            text: text,
+            font: .logo3,
+            lineHeightMultiplier: 1.4,
+            alignment: alignment,
+            additionalAttribute: additionalAttribute,
+            additionalRange: additionalRange,
+            isUnderline: true
+        )
+    }
+    
+    static func logo4(
+        _ text: String,
+        alignment: NSTextAlignment = .left,
+        additionalAttribute: [NSAttributedString.Key: Any]? = nil,
+        additionalRange: NSRange? = nil
+    ) -> NSAttributedString {
+        generateAttribute(
+            text: text,
+            font: .logo4,
+            lineHeightMultiplier: 1.4,
+            alignment: alignment,
+            additionalAttribute: additionalAttribute,
+            additionalRange: additionalRange,
+            isUnderline: true
+        )
+    }
+    
+    static func logo5(
+        _ text: String,
+        alignment: NSTextAlignment = .left,
+        additionalAttribute: [NSAttributedString.Key: Any]? = nil,
+        additionalRange: NSRange? = nil
+    ) -> NSAttributedString {
+        generateAttribute(
+            text: text,
+            font: .logo5,
+            lineHeightMultiplier: 1.4,
+            alignment: alignment,
+            additionalAttribute: additionalAttribute,
+            additionalRange: additionalRange,
+            isUnderline: true
+        )
+    }
+}
+
 // MARK: NSMutableAttributedString
 public extension NSMutableAttributedString {
-    public func replaceAttributedString(from : String, to : NSAttributedString) {
+    func replaceAttributedString(from : String, to : NSAttributedString) {
         if let startRange = self.string.range(of: from) {
             let nsStartRange = NSRange(startRange, in: self.string)
             self.replaceCharacters(in: nsStartRange, with: to)
@@ -542,7 +630,7 @@ public extension NSMutableAttributedString {
 
 // MARK: NSAttributedString
 public extension NSAttributedString {
-    public func height(containerWidth: CGFloat) -> CGFloat {
+    func height(containerWidth: CGFloat) -> CGFloat {
         let rect = self.boundingRect(with: CGSize.init(width: containerWidth, height: CGFloat.greatestFiniteMagnitude),
                                      options: [.usesLineFragmentOrigin, .usesFontLeading],
                                      context: nil)

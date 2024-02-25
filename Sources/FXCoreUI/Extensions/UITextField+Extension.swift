@@ -10,7 +10,7 @@ import Combine
 
 // Extension to provide a generic publisher for UITextField events
 public extension UITextField {
-    public func publisher(for events: [Notification.Name]) -> AnyPublisher<(Notification.Name, String?), Never> {
+    func publisher(for events: [Notification.Name]) -> AnyPublisher<(Notification.Name, String?), Never> {
         let publishers = events.map { event in
             NotificationCenter.default.publisher(for: event, object: self)
                 .map { _ in (event, self.text) }
@@ -18,12 +18,12 @@ public extension UITextField {
         return Publishers.MergeMany(publishers).eraseToAnyPublisher()
     }
     
-    public func setPLaceholderTextColor(_ color: UIColor) {
+    func setPLaceholderTextColor(_ color: UIColor) {
         guard let holder = placeholder, !holder.isEmpty else { return }
         attributedPlaceholder = NSAttributedString(string: holder, attributes: [.foregroundColor: color])
     }
     
-    public func setCustomPlaceholder(font: UIFont, color: UIColor) {
+    func setCustomPlaceholder(font: UIFont, color: UIColor) {
         guard let placeholder = placeholder, !placeholder.isEmpty else { return }
         attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [
             .foregroundColor: color,
@@ -32,7 +32,7 @@ public extension UITextField {
         ])
     }
     
-    public func setMaxLength(_ length: Int) {
+    func setMaxLength(_ length: Int) {
         addTarget(self, action: #selector(limitLength), for: .editingChanged)
         objc_setAssociatedObject(self, "length_limit", length, .OBJC_ASSOCIATION_RETAIN)
     }
