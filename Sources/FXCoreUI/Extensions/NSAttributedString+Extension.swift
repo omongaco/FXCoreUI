@@ -545,7 +545,7 @@ public extension NSAttributedString {
             alignment: alignment,
             additionalAttribute: additionalAttribute,
             additionalRange: additionalRange,
-            isUnderline: true
+            isUnderline: false
         )
     }
     
@@ -562,7 +562,7 @@ public extension NSAttributedString {
             alignment: alignment,
             additionalAttribute: additionalAttribute,
             additionalRange: additionalRange,
-            isUnderline: true
+            isUnderline: false
         )
     }
     
@@ -579,7 +579,7 @@ public extension NSAttributedString {
             alignment: alignment,
             additionalAttribute: additionalAttribute,
             additionalRange: additionalRange,
-            isUnderline: true
+            isUnderline: false
         )
     }
     
@@ -596,7 +596,7 @@ public extension NSAttributedString {
             alignment: alignment,
             additionalAttribute: additionalAttribute,
             additionalRange: additionalRange,
-            isUnderline: true
+            isUnderline: false
         )
     }
     
@@ -613,7 +613,7 @@ public extension NSAttributedString {
             alignment: alignment,
             additionalAttribute: additionalAttribute,
             additionalRange: additionalRange,
-            isUnderline: true
+            isUnderline: false
         )
     }
 }
