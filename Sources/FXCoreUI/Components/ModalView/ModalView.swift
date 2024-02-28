@@ -8,13 +8,13 @@
 
 import UIKit
 
-struct ModalGeneralErrorProperties {
-    let title: String?
-    let titleIcon: UIImage?
-    let body: String?
-    let primaryButtonText: String?
-    let secondaryButtonText: String?
-    var isShowCloseButton: Bool = false
+public struct ModalGeneralErrorProperties {
+    public let title: String?
+    public let titleIcon: UIImage?
+    public let body: String?
+    public let primaryButtonText: String?
+    public let secondaryButtonText: String?
+    public var isShowCloseButton: Bool = false
 
     public init(
         title: String? = nil,
@@ -33,31 +33,31 @@ struct ModalGeneralErrorProperties {
     }
 }
 
-struct ModalGeneralConfigProperties {
-    var topTitle: String?
-    var topTitleIcon: UIImage?
-    var title: String?
-    var subTitle: String?
-    var titleIcon: UIImage?
-    var description: String?
-    var body: String?
-    var primaryButtonText: String?
-    var primaryButtonLeftImage: UIImage?
-    var primaryButtonRightImage: UIImage?
-    var secondaryButtonText: String?
-    var secondaryButtonLeftImage: UIImage?
-    var secondaryButtonRightImage: UIImage?
-    var tertiaryButtonText: String?
-    var tertiaryButtonLeftImage: UIImage?
-    var tertiaryButtonRightImage: UIImage?
-    var withCloseButton: Bool
-    var image: UIImage?
+public struct ModalGeneralConfigProperties {
+    public var topTitle: String?
+    public var topTitleIcon: UIImage?
+    public var title: String?
+    public var subTitle: String?
+    public var titleIcon: UIImage?
+    public var description: String?
+    public var body: String?
+    public var primaryButtonText: String?
+    public var primaryButtonLeftImage: UIImage?
+    public var primaryButtonRightImage: UIImage?
+    public var secondaryButtonText: String?
+    public var secondaryButtonLeftImage: UIImage?
+    public var secondaryButtonRightImage: UIImage?
+    public var tertiaryButtonText: String?
+    public var tertiaryButtonLeftImage: UIImage?
+    public var tertiaryButtonRightImage: UIImage?
+    public var withCloseButton: Bool
+    public var image: UIImage?
     
     // Used for closure action
-    var onTapPrimaryButton: (() -> Void)?
-    var onTapSecondaryButton: (() -> Void)?
-    var onTapTertiaryButton: (() -> Void)?
-    var onTapCloseButton: (() -> Void)?
+    public var onTapPrimaryButton: (() -> Void)?
+    public var onTapSecondaryButton: (() -> Void)?
+    public var onTapTertiaryButton: (() -> Void)?
+    public var onTapCloseButton: (() -> Void)?
 
     public init(
         topTitle: String? = nil,
@@ -106,7 +106,7 @@ struct ModalGeneralConfigProperties {
     }
 }
 
-class ModalView: UIView {
+public class ModalView: UIView {
     @IBOutlet weak var grayView: UIView!
     @IBOutlet weak var modalContainer: UIView!
     @IBOutlet weak var modalStackView: UIStackView!
@@ -145,7 +145,7 @@ class ModalView: UIView {
     
     let animationUp = 0.4
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         loadFunctions()
     }
@@ -229,14 +229,14 @@ extension ModalView {
         tertiaryButton.setTitleColor(.FlexColor.orange300, for: .normal)
     }
     
-    func setInitialPosition() {
+    public func setInitialPosition() {
         grayView.alpha = .zero
         let yPosition: CGFloat = .deviceHeight - modalContainer.frame.height - CoreUIConstant.UISpacing.twentyFour.rawValue
         modalContainer.transform = CGAffineTransform(translationX: .zero, y: yPosition)
         modalContainer.isHidden = false
     }
     
-    func predefinedGeneralError(title: String,
+    public func predefinedGeneralError(title: String,
                                 titleIcon: UIImage?,
                                 body: String,
                                 primaryButtonText: String?,
@@ -263,7 +263,7 @@ extension ModalView {
         secondaryButton.setAttributedTitle(.label1DemiBold(secondaryButtonText ?? .emptyString), for: .normal)
     }
     
-    func confirmationConfig(body: String,
+    public func confirmationConfig(body: String,
                             title: String,
                             subTitle: String,
                             titleIcon: UIImage?,
@@ -302,7 +302,7 @@ extension ModalView {
         }
     }
     
-    func predefinedGeneralConfig(title: String,
+    public func predefinedGeneralConfig(title: String,
                                  titleIcon: UIImage?,
                                  image: UIImage?,
                                  body: String,
@@ -344,7 +344,7 @@ extension ModalView {
         }
     }
     
-    func closureConfig(_ properties: ModalGeneralConfigProperties) {
+    public func closureConfig(_ properties: ModalGeneralConfigProperties) {
         closeContainer.isHidden = !properties.withCloseButton
         mainImageContainer.isHidden = true
         topTitleContainer.isHidden = true
@@ -380,7 +380,7 @@ extension ModalView {
         self.onTapTertiaryButton = properties.onTapTertiaryButton
     }
     
-    func animateShow(completion: ((Bool) -> Void)?) {
+    public func animateShow(completion: ((Bool) -> Void)?) {
         UIView.animate(
             withDuration: animationUp,
             delay: .zero,
@@ -395,7 +395,7 @@ extension ModalView {
             completion: completion)
     }
     
-    func animateDismiss(completion: (() -> Void)?) {
+    public func animateDismiss(completion: (() -> Void)?) {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
         guard let window = CoreUIUtility.keyWindow else { return }
         UIView.animate(
@@ -421,15 +421,15 @@ extension ModalView {
 }
 
 extension ModalView {
-    func show(with customView: UIView? = nil) {
+    public func show(with customView: UIView? = nil) {
         show(with: customView, completion: nil)
     }
     
-    func show(with customView: UIView? = nil, completion: ((Bool) -> Void)?) {
+    public func show(with customView: UIView? = nil, completion: ((Bool) -> Void)?) {
         show(with: customView, withCloseButton: false, completion: completion)
     }
     
-    func show(with customView: UIView? = nil, withCloseButton: Bool, completion: ((Bool) -> Void)?) {
+    public func show(with customView: UIView? = nil, withCloseButton: Bool, completion: ((Bool) -> Void)?) {
         guard let window = CoreUIUtility.keyWindow else { return }
         if let subview = window.subviews.filter({ $0.tag == CoreUIConstant.ViewTags.overlayTag }).first {
             subview.removeFromSuperview()
@@ -446,21 +446,21 @@ extension ModalView {
         animateShow(completion: completion)
     }
     
-    func dismissModal(completion: (() -> Void)?) {
+    public func dismissModal(completion: (() -> Void)?) {
         animateDismiss(completion: completion)
     }
     
-    func dismissModal() {
+    public func dismissModal() {
         dismissModal(completion: nil)
     }
     
-    func didTappedOutsideDialog(completion: (() -> Void)?) {
+    public func didTappedOutsideDialog(completion: (() -> Void)?) {
         grayView.addAction {[weak self] in
             self?.dismissModal(completion: completion)
         }
     }
     
-    func showWithGeneralError(_ properties: ModalGeneralErrorProperties) {
+    public func showWithGeneralError(_ properties: ModalGeneralErrorProperties) {
         predefinedGeneralError(
             title: properties.title ?? .emptyString,
             titleIcon: properties.titleIcon,
@@ -472,7 +472,7 @@ extension ModalView {
         show()
     }
     
-    func showGeneralConfig(_ properties: ModalGeneralConfigProperties) {
+    public func showGeneralConfig(_ properties: ModalGeneralConfigProperties) {
         confirmationConfig(body: properties.body ?? .emptyString,
                            title: properties.title ?? .emptyString,
                            subTitle: properties.subTitle ?? .emptyString,
@@ -485,12 +485,12 @@ extension ModalView {
         show()
     }
     
-    func showGeneralConfigWithClosure(_ properties: ModalGeneralConfigProperties) {
+    public func showGeneralConfigWithClosure(_ properties: ModalGeneralConfigProperties) {
         closureConfig(properties)
         show()
     }
     
-    func setButtonImages(button: UIButton, leftImage: UIImage?, rightImage: UIImage?) {
+    public func setButtonImages(button: UIButton, leftImage: UIImage?, rightImage: UIImage?) {
         if #available(iOS 15.0, *) {
             let buttonTitleColor = button.titleColor(for: .normal)
             let buttonBackgroundColor = button.backgroundColor
