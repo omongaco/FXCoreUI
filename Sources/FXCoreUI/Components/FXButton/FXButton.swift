@@ -168,8 +168,8 @@ public class FXButton: UIButton {
             setQuietStyle()
         case .quietWithUnderline:
             setQuietUnderlineStyle()
-        case .black:
-            setBlackStyle()
+        case .outlined:
+            outlined()
         case .transparantBorder:
             setTransparantBorder()
         case .clearBorder:
@@ -195,14 +195,14 @@ public class FXButton: UIButton {
     }
     
     private func setPrimaryStyle() {
-        color = .FlexColor.black
-        background = .FlexColor.turquoise300
-        tappedBackground = .FlexColor.turquoise400
+        color = .FlexColor.white
+        background = .FlexColor.black
+        tappedBackground = .FlexColor.gray
     }
     
     private func setSecondaryStyle() {
         color = .FlexColor.black
-        background = .FlexColor.white
+        background = .FlexColor.paleGray
         tappedBackground = .FlexColor.snowWhite
         borderColor = .FlexColor.graniteGray
     }
@@ -220,11 +220,11 @@ public class FXButton: UIButton {
         tappedColor = .FlexColor.orange700
     }
     
-    private func setBlackStyle() {
-        color = .FlexColor.white
-        background = .FlexColor.black
-        tappedColor = .FlexColor.white
-        tappedBackground = .FlexColor.black
+    private func outlined() {
+        color = .FlexColor.black
+        background = .clear
+        tappedColor = .FlexColor.gray
+        tappedBackground = .FlexColor.lightGray
     }
     
     private func setTransparantBorder() {

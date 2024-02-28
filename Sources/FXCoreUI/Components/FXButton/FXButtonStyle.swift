@@ -12,7 +12,7 @@ public enum ButtonStyle {
     case secondary
     case quiet
     case quietWithUnderline
-    case black
+    case outlined
     case transparantBorder
     case clearBorder
     case transparantOrange
