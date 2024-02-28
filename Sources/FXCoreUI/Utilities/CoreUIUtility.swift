@@ -22,4 +22,15 @@ public class CoreUIUtility: NSObject {
             }
         }
     }
+    
+    public static var keyWindow: UIWindow? {
+        if #available(iOS 13.0, *) {
+            return UIApplication.shared.connectedScenes
+                .compactMap { $0 as? UIWindowScene }
+                .compactMap { $0.windows.first { $0.isKeyWindow } }
+                .first
+        } else {
+            return UIApplication.shared.keyWindow
+        }
+    }
 }
