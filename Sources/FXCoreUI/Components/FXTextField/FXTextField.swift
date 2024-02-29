@@ -132,18 +132,6 @@ public class FXTextField: UIView {
         }
     }
     
-    private let accessoryView: UIToolbar = {
-        let toolbar = UIToolbar()
-        toolbar.sizeToFit()
-        
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: FXTextField.self, action: #selector(handleDoneButtonTap))
-        
-        toolbar.items = [flexibleSpace, doneButton]
-        
-        return toolbar
-    }()
-    
     // MARK: - Lifecycle
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -188,10 +176,6 @@ extension FXTextField {
         configureCaption()
         initialStateTitleLabel()
         hideOtherComponents()
-    }
-    
-    public override var inputAccessoryView: UIView? {
-        return accessoryView
     }
     
     func initialSetup() {
@@ -282,10 +266,6 @@ extension FXTextField {
     func checkTextfieldForDeleteButton() {
         let currentText = textField.text ?? .emptyString
         rightButton1.isHidden = currentText.isEmpty
-    }
-    
-    @objc private func handleDoneButtonTap() {
-        textField.resignFirstResponder()
     }
 }
 
