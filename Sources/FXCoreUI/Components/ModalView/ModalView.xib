@@ -47,10 +47,10 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="heJ-6L-8UH">
-                    <rect key="frame" x="24" y="135.66666666666669" width="345" height="668.33333333333326"/>
+                    <rect key="frame" x="24" y="151.66666666666669" width="345" height="652.33333333333326"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="GDI-JM-t5h">
-                            <rect key="frame" x="16" y="24" width="313" height="620.33333333333337"/>
+                            <rect key="frame" x="16" y="8" width="313" height="620.33333333333337"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TnN-ny-kdd">
                                     <rect key="frame" x="0.0" y="0.0" width="313" height="24"/>
@@ -64,6 +64,9 @@
                                             <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="buttonsTapActions:" destination="-1" eventType="touchUpInside" id="eAf-Rd-Hqf"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -202,6 +205,9 @@
                                             </constraints>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="buttonsTapActions:" destination="-1" eventType="touchUpInside" id="9iu-m7-vpz"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OA-gW-B1T">
                                             <rect key="frame" x="0.0" y="56" width="313" height="48"/>
@@ -210,6 +216,9 @@
                                             </constraints>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="buttonsTapActions:" destination="-1" eventType="touchUpInside" id="GCX-Zk-EGU"/>
+                                            </connections>
                                         </button>
                                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONC-a5-REQ">
                                             <rect key="frame" x="0.0" y="104" width="313" height="48"/>
@@ -218,6 +227,9 @@
                                             </constraints>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="buttonsTapActions:" destination="-1" eventType="touchUpInside" id="TEZ-cw-eB6"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -229,7 +241,7 @@
                         <constraint firstItem="GDI-JM-t5h" firstAttribute="leading" secondItem="heJ-6L-8UH" secondAttribute="leading" constant="16" id="95A-b8-5qf"/>
                         <constraint firstAttribute="bottom" secondItem="GDI-JM-t5h" secondAttribute="bottom" constant="24" id="9oV-XS-Jgc"/>
                         <constraint firstAttribute="trailing" secondItem="GDI-JM-t5h" secondAttribute="trailing" constant="16" id="JjP-0Y-D2h"/>
-                        <constraint firstItem="GDI-JM-t5h" firstAttribute="top" secondItem="heJ-6L-8UH" secondAttribute="top" constant="24" id="OW4-7u-1PB"/>
+                        <constraint firstItem="GDI-JM-t5h" firstAttribute="top" secondItem="heJ-6L-8UH" secondAttribute="top" constant="8" id="OW4-7u-1PB"/>
                     </constraints>
                 </view>
             </subviews>
