@@ -111,8 +111,9 @@ public class ModalView: UIView {
     @IBOutlet weak var modalContainer: UIView!
     @IBOutlet weak var modalStackView: UIStackView!
     
-    @IBOutlet weak var closeContainer: UIView!
+    @IBOutlet weak var closeContainer: UIStackView!
     @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var modalTitle: UILabel!
     
     @IBOutlet weak var mainImageContainer: UIView!
     @IBOutlet weak var mainImageView: UIImageView!
@@ -174,13 +175,10 @@ public class ModalView: UIView {
     
     func loadFunctions() {
         initialSetup()
-        configureGrayView()
-        configureCloseButton()
-        configureModalContainer()
+        configureViews()
         configurePrimaryButton()
         configureSecondaryButton()
         configureTertiaryButton()
-        descriptionLabelContainer.isHidden = true
     }
     
     private func initialSetup() {
@@ -193,28 +191,26 @@ public class ModalView: UIView {
 }
 
 extension ModalView {
-    private func configureGrayView() {
+    private func configureViews() {
+        // Gray Area
         grayView.backgroundColor = .FlexColor.overlay
         grayView.alpha = .zero
-    }
-    
-    private func configureCloseButton() {
-        modalStackView.setCustomSpacing(CoreUIConstant.UISizing.small.rawValue, 
-                                        after: closeContainer)
-        closeButton.setImage(UIImage(systemName: "xmark"), 
-                             for: .normal)
-    }
-    
-    private func configureModalContainer() {
+        // Modal Title
+        modalTitle.font = .headline2Bold
+        // Close Button
+        modalStackView.setCustomSpacing(CoreUIConstant.UISizing.small.rawValue, after: closeContainer)
+        closeButton.setImage(UIImage(systemName: "xmark"), for: .normal)
+        // Modal Container
         modalContainer.backgroundColor = .FlexColor.white
         modalContainer.cornerRadius(CoreUIConstant.UISizing.small.rawValue)
         modalContainer.isHidden = true
+        descriptionLabelContainer.isHidden = true
     }
     
     private func configurePrimaryButton() {
-        primaryButton.backgroundColor = .FlexColor.turquoise300
+        primaryButton.backgroundColor = .FlexColor.black
         primaryButton.cornerRadius(primaryButton.frame.height / Int.two.toCGFloat())
-        primaryButton.setTitleColor(.FlexColor.black, for: .normal)
+        primaryButton.setTitleColor(.FlexColor.snowWhite, for: .normal)
     }
     
     private func configureSecondaryButton() {
