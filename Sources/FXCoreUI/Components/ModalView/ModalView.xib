@@ -28,6 +28,7 @@
                 <outlet property="mainImageView" destination="Gn6-M6-YSz" id="6ct-MM-b9Y"/>
                 <outlet property="modalContainer" destination="heJ-6L-8UH" id="vO6-ii-Vj1"/>
                 <outlet property="modalStackView" destination="GDI-JM-t5h" id="iXg-KR-7dJ"/>
+                <outlet property="modalTitle" destination="D99-Fa-n7x" id="AJ3-va-vSR"/>
                 <outlet property="primaryButton" destination="GUZ-2q-pHc" id="Xct-Ab-7BZ"/>
                 <outlet property="secondaryButton" destination="1OA-gW-B1T" id="n1g-dy-9k1"/>
                 <outlet property="subBodyLabel" destination="zV7-r0-5mq" id="fjt-Qe-qTk"/>
