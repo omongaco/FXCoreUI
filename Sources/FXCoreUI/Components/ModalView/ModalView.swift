@@ -201,7 +201,7 @@ extension ModalView {
     private func configureCloseButton() {
         modalStackView.setCustomSpacing(CoreUIConstant.UISizing.small.rawValue, 
                                         after: closeContainer)
-        closeButton.setImage(UIImage(systemName: "xmark.square"), 
+        closeButton.setImage(UIImage(systemName: "xmark"), 
                              for: .normal)
     }
     
