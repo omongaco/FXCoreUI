@@ -196,13 +196,13 @@ extension ModalView {
         grayView.backgroundColor = .FlexColor.overlay
         grayView.alpha = .zero
         // Modal Title
-        modalTitle.font = .headline2Bold
+        modalTitle.font = .headline3Bold
         // Close Button
         modalStackView.setCustomSpacing(CoreUIConstant.UISizing.small.rawValue, after: closeContainer)
         closeButton.setImage(UIImage(systemName: "xmark"), for: .normal)
         // Modal Container
         modalContainer.backgroundColor = .FlexColor.white
-        modalContainer.cornerRadius(CoreUIConstant.UISizing.small.rawValue)
+        modalContainer.cornerRadius(CoreUIConstant.UISizing.small.rawValue, cornerType: .allTop)
         modalContainer.isHidden = true
         descriptionLabelContainer.isHidden = true
     }

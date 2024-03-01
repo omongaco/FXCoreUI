@@ -273,7 +273,7 @@ extension FXTextField {
 extension FXTextField {
     func setToDefault() {
         containerView.backgroundColor = .FlexColor.white
-        borderColorStartEditing = .FlexColor.pepper300
+        borderColorStartEditing = .FlexColor.black
         borderColorEndEditing = .FlexColor.lightGray
         setContainerBottomBorderColor(borderColorEndEditing)
         titleLabel.textColor = .FlexColor.black
