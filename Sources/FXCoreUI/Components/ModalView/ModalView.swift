@@ -417,15 +417,15 @@ extension ModalView {
 }
 
 extension ModalView {
-    public func show(with customView: UIView? = nil) {
-        show(with: customView, completion: nil)
+    public func show(with customView: UIView? = nil, title: String? = nil) {
+        show(with: customView, title: title, completion: nil)
     }
     
-    public func show(with customView: UIView? = nil, completion: ((Bool) -> Void)?) {
-        show(with: customView, withCloseButton: false, completion: completion)
+    public func show(with customView: UIView? = nil, title: String? = nil, completion: ((Bool) -> Void)?) {
+        show(with: customView, title: title, withCloseButton: false, completion: completion)
     }
     
-    public func show(with customView: UIView? = nil, withCloseButton: Bool, completion: ((Bool) -> Void)?) {
+    public func show(with customView: UIView? = nil, title: String? = nil, withCloseButton: Bool, completion: ((Bool) -> Void)?) {
         guard let window = CoreUIUtility.keyWindow else { return }
         if let subview = window.subviews.filter({ $0.tag == CoreUIConstant.ViewTags.overlayTag }).first {
             subview.removeFromSuperview()
@@ -437,6 +437,9 @@ extension ModalView {
             contentStack.isHidden = true
             buttonStack.isHidden = true
             modalStackView.addArrangedSubview(customView)
+        }
+        if let title {
+            modalTitle.text = title
         }
         setInitialPosition()
         animateShow(completion: completion)
