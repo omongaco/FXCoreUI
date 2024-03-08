@@ -197,7 +197,6 @@ extension ModalView {
         grayView.alpha = .zero
         // Modal Title
         modalTitle.font = .headline3Bold
-        modalTitle.isHidden = true
         // Close Button
         modalStackView.setCustomSpacing(CoreUIConstant.UISizing.small.rawValue, after: closeContainer)
         closeButton.setImage(UIImage(systemName: "xmark"), for: .normal)
@@ -440,7 +439,6 @@ extension ModalView {
             modalStackView.addArrangedSubview(customView)
         }
         if let title {
-            modalTitle.isHidden = false
             modalTitle.text = title
         }
         setInitialPosition()

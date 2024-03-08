@@ -236,7 +236,7 @@ public class FXButton: UIButton {
     }
     
     private func setClearBorder() {
-        color = .FlexColor.orange300
+        color = .FlexColor.gray
         background = .FlexColor.white
         tappedColor = .FlexColor.white
     }
