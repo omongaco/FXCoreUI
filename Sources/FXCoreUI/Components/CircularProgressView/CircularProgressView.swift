@@ -86,9 +86,9 @@ public class CircularProgressView: UIView {
         }
 
         // Configure progress layer colors
-        doneLayer.strokeColor = UIColor.systemOrange.cgColor
-        todoLayer.strokeColor = UIColor.systemYellow.cgColor
-        pendingLayer.strokeColor = UIColor.systemBlue.cgColor
+        doneLayer.strokeColor = UIColor.FlatColors.turquoise.cgColor
+        todoLayer.strokeColor = UIColor.FlatColors.sunFlower.cgColor
+        pendingLayer.strokeColor = UIColor.FlatColors.pomegranate.cgColor
 
         // Configure the total projects title label
         totalTasksTitleLabel.attributedText = .label3Regular("Total Tasks",
