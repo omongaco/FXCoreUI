@@ -8,10 +8,10 @@
 import UIKit
 
 public extension CGFloat {
-    public static let deviceWidth  = UIScreen.main.bounds.width
-    public static let deviceHeight = UIScreen.main.bounds.height
+    static let deviceWidth  = UIScreen.main.bounds.width
+    static let deviceHeight = UIScreen.main.bounds.height
     
-    public static func getTextWidth(_ text: String,
+    static func getTextWidth(_ text: String,
                                     height: CGFloat,
                                     font: UIFont,
                                     line: Int = 1) -> CGFloat {

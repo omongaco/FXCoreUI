@@ -15,8 +15,7 @@ let package = Package(
             targets: ["FXCoreUI"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/airbnb/lottie-spm.git", 
-                 from: "4.3.4"),
+        .package(url: "https://github.com/airbnb/lottie-spm.git", from: "4.3.4"),
         .package(url: "https://github.com/omongaco/FXCore.git", .upToNextMajor(from: "1.0.0"))
     ],
     targets: [
