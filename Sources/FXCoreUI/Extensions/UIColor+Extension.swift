@@ -73,43 +73,42 @@ public extension UIColor {
 
 // MARK: - Turquoise
 public extension UIColor.FlexColor {
-    static let turquoise100     = #colorLiteral(red: 0.8862745098, green: 0.9725490196, blue: 0.9647058824, alpha: 1)
-    static let turquoise200     = #colorLiteral(red: 0.7764705882, green: 0.9450980392, blue: 0.9294117647, alpha: 1)
-    static let turquoise300     = #colorLiteral(red: 0.6666666667, green: 0.9137254902, blue: 0.8941176471, alpha: 1)
-    static let turquoise400     = #colorLiteral(red: 0.5529411765, green: 0.8862745098, blue: 0.862745098, alpha: 1)
-    static let turquoise500     = #colorLiteral(red: 0.4431372549, green: 0.8588235294, blue: 0.8274509804, alpha: 1)
-    static let turquoise600     = #colorLiteral(red: 0.3176470588, green: 0.8039215686, blue: 0.768627451, alpha: 1)
-    static let turquoise700     = #colorLiteral(red: 0.1294117647, green: 0.6705882353, blue: 0.631372549, alpha: 1)
-    static let turquoise800     = #colorLiteral(red: 0.003921568627, green: 0.4784313725, blue: 0.4431372549, alpha: 1)
-    static let turquoise900     = #colorLiteral(red: 0, green: 0.2745098039, blue: 0.2549019608, alpha: 1)
-    static let turquoiseGray    = #colorLiteral(red: 0.6156862745, green: 0.7764705882, blue: 0.7882352941, alpha: 1)
+    static let turquoise100 = #colorLiteral(red: 0.8862745098, green: 0.9725490196, blue: 0.9647058824, alpha: 1)
+    static let turquoise200 = #colorLiteral(red: 0.7764705882, green: 0.9450980392, blue: 0.9294117647, alpha: 1)
+    static let turquoise300 = #colorLiteral(red: 0.6666666667, green: 0.9137254902, blue: 0.8941176471, alpha: 1)
+    static let turquoise400 = #colorLiteral(red: 0.5529411765, green: 0.8862745098, blue: 0.862745098, alpha: 1)
+    static let turquoise500 = #colorLiteral(red: 0.4431372549, green: 0.8588235294, blue: 0.8274509804, alpha: 1)
+    static let turquoise600 = #colorLiteral(red: 0.3176470588, green: 0.8039215686, blue: 0.768627451, alpha: 1)
+    static let turquoise700 = #colorLiteral(red: 0.1294117647, green: 0.6705882353, blue: 0.631372549, alpha: 1)
+    static let turquoise800 = #colorLiteral(red: 0.003921568627, green: 0.4784313725, blue: 0.4431372549, alpha: 1)
+    static let turquoise900 = #colorLiteral(red: 0, green: 0.2745098039, blue: 0.2549019608, alpha: 1)
+    static let turquoiseGray = #colorLiteral(red: 0.6156862745, green: 0.7764705882, blue: 0.7882352941, alpha: 1)
 }
 
 public extension UIColor.FlexColor {
-    // Replace the placeholder values with the actual color values you obtain from your color picker
-    static let pepper100       = #colorLiteral(red: 0.9764705882, green: 0.9254901961, blue: 0.9254901961, alpha: 1) // Replace with actual 10% shade RGB values
-    static let pepper200       = #colorLiteral(red: 0.9529411765, green: 0.8509803922, blue: 0.8470588235, alpha: 1) // Replace with actual 20% shade RGB values
-    static let pepper300       = #colorLiteral(red: 0.9254901961, green: 0.7803921569, blue: 0.7725490196, alpha: 1) // Replace with actual 30% shade RGB values
-    static let pepper400       = #colorLiteral(red: 0.8745098039, green: 0.6352941176, blue: 0.6235294118, alpha: 1) // Replace with actual 40% shade RGB values
-    static let pepper500       = #colorLiteral(red: 0.8470588235, green: 0.5607843137, blue: 0.5529411765, alpha: 1) // Replace with actual 50% shade RGB values
-    static let pepper600       = #colorLiteral(red: 0.8196078431, green: 0.4901960784, blue: 0.4784313725, alpha: 1) // Replace with actual 60% shade RGB values
-    static let pepper700       = #colorLiteral(red: 0.7921568627, green: 0.4196078431, blue: 0.4078431373, alpha: 1) // Replace with actual 70% shade RGB values
-    static let pepper800       = #colorLiteral(red: 0.7647058824, green: 0.3490196078, blue: 0.3333333333, alpha: 1) // Replace with actual 80% shade RGB values
-    static let pepper900       = #colorLiteral(red: 0.791729817, green: 0.2784313725, blue: 0.262745098, alpha: 1) // Replace with actual 90% shade RGB values
-    static let pepperBase      = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1) // Replace with actual base color RGB values
+    static let pepper100 = #colorLiteral(red: 0.9764705882, green: 0.9254901961, blue: 0.9254901961, alpha: 1)
+    static let pepper200 = #colorLiteral(red: 0.9529411765, green: 0.8509803922, blue: 0.8470588235, alpha: 1)
+    static let pepper300 = #colorLiteral(red: 0.9254901961, green: 0.7803921569, blue: 0.7725490196, alpha: 1)
+    static let pepper400 = #colorLiteral(red: 0.8745098039, green: 0.6352941176, blue: 0.6235294118, alpha: 1)
+    static let pepper500 = #colorLiteral(red: 0.8470588235, green: 0.5607843137, blue: 0.5529411765, alpha: 1)
+    static let pepper600 = #colorLiteral(red: 0.8196078431, green: 0.4901960784, blue: 0.4784313725, alpha: 1)
+    static let pepper700 = #colorLiteral(red: 0.7921568627, green: 0.4196078431, blue: 0.4078431373, alpha: 1)
+    static let pepper800 = #colorLiteral(red: 0.7647058824, green: 0.3490196078, blue: 0.3333333333, alpha: 1)
+    static let pepper900 = #colorLiteral(red: 0.791729817, green: 0.2784313725, blue: 0.262745098, alpha: 1)
+    static let pepperBase = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
 }
 
 // MARK: - Yellow
 public extension UIColor.FlexColor {
-    static let yellow100    = #colorLiteral(red: 1, green: 0.9764705882, blue: 0.9215686275, alpha: 1)
-    static let yellow200    = #colorLiteral(red: 1, green: 0.9529411765, blue: 0.8392156863, alpha: 1)
-    static let yellow300    = #colorLiteral(red: 1, green: 0.9098039216, blue: 0.6784313725, alpha: 1)
-    static let yellow400    = #colorLiteral(red: 1, green: 0.862745098, blue: 0.5215686275, alpha: 1)
-    static let yellow500    = #colorLiteral(red: 1, green: 0.8196078431, blue: 0.3607843137, alpha: 1)
-    static let yellow600    = #colorLiteral(red: 1, green: 0.7725490196, blue: 0.2, alpha: 1)
-    static let yellow700    = #colorLiteral(red: 0.9490196078, green: 0.7019607843, blue: 0.07843137255, alpha: 1)
-    static let yellow800    = #colorLiteral(red: 0.8745098039, green: 0.6274509804, blue: 0, alpha: 1)
-    static let yellow900    = #colorLiteral(red: 0.6941176471, green: 0.4980392157, blue: 0, alpha: 1)
+    static let yellow100 = #colorLiteral(red: 1, green: 0.9764705882, blue: 0.9215686275, alpha: 1)
+    static let yellow200 = #colorLiteral(red: 1, green: 0.9529411765, blue: 0.8392156863, alpha: 1)
+    static let yellow300 = #colorLiteral(red: 1, green: 0.9098039216, blue: 0.6784313725, alpha: 1)
+    static let yellow400 = #colorLiteral(red: 1, green: 0.862745098, blue: 0.5215686275, alpha: 1)
+    static let yellow500 = #colorLiteral(red: 1, green: 0.8196078431, blue: 0.3607843137, alpha: 1)
+    static let yellow600 = #colorLiteral(red: 1, green: 0.7725490196, blue: 0.2, alpha: 1)
+    static let yellow700 = #colorLiteral(red: 0.9490196078, green: 0.7019607843, blue: 0.07843137255, alpha: 1)
+    static let yellow800 = #colorLiteral(red: 0.8745098039, green: 0.6274509804, blue: 0, alpha: 1)
+    static let yellow900 = #colorLiteral(red: 0.6941176471, green: 0.4980392157, blue: 0, alpha: 1)
 }
 
 // MARK: - Green
@@ -127,54 +126,54 @@ public extension UIColor.FlexColor {
 
 // MARK: - Magenta
 public extension UIColor.FlexColor {
-    static let magenta100            = #colorLiteral(red: 0.9843137255, green: 0.9176470588, blue: 0.9843137255, alpha: 1)
-    static let magenta200            = #colorLiteral(red: 0.968627451, green: 0.831372549, blue: 0.968627451, alpha: 1)
-    static let magenta300            = #colorLiteral(red: 0.9490196078, green: 0.7490196078, blue: 0.9490196078, alpha: 1)
-    static let magenta400            = #colorLiteral(red: 0.9333333333, green: 0.662745098, blue: 0.9333333333, alpha: 1)
-    static let magenta500            = #colorLiteral(red: 0.9176470588, green: 0.5803921569, blue: 0.9176470588, alpha: 1)
-    static let magenta600            = #colorLiteral(red: 0.8705882353, green: 0.4509803922, blue: 0.8705882353, alpha: 1)
-    static let magenta700            = #colorLiteral(red: 0.8196078431, green: 0.2980392157, blue: 0.8196078431, alpha: 1)
-    static let magenta800            = #colorLiteral(red: 0.7490196078, green: 0.1607843137, blue: 0.7490196078, alpha: 1)
-    static let magenta900            = #colorLiteral(red: 0.6078431373, green: 0.01568627451, blue: 0.6078431373, alpha: 1)
+    static let magenta100 = #colorLiteral(red: 0.9843137255, green: 0.9176470588, blue: 0.9843137255, alpha: 1)
+    static let magenta200 = #colorLiteral(red: 0.968627451, green: 0.831372549, blue: 0.968627451, alpha: 1)
+    static let magenta300 = #colorLiteral(red: 0.9490196078, green: 0.7490196078, blue: 0.9490196078, alpha: 1)
+    static let magenta400 = #colorLiteral(red: 0.9333333333, green: 0.662745098, blue: 0.9333333333, alpha: 1)
+    static let magenta500 = #colorLiteral(red: 0.9176470588, green: 0.5803921569, blue: 0.9176470588, alpha: 1)
+    static let magenta600 = #colorLiteral(red: 0.8705882353, green: 0.4509803922, blue: 0.8705882353, alpha: 1)
+    static let magenta700 = #colorLiteral(red: 0.8196078431, green: 0.2980392157, blue: 0.8196078431, alpha: 1)
+    static let magenta800 = #colorLiteral(red: 0.7490196078, green: 0.1607843137, blue: 0.7490196078, alpha: 1)
+    static let magenta900 = #colorLiteral(red: 0.6078431373, green: 0.01568627451, blue: 0.6078431373, alpha: 1)
 }
 
 // MARK: - Purple
 public extension UIColor.FlexColor {
-    static let purple100             = #colorLiteral(red: 0.9215686275, green: 0.8980392157, blue: 0.9725490196, alpha: 1)
-    static let purple200             = #colorLiteral(red: 0.8823529412, green: 0.8470588235, blue: 0.9607843137, alpha: 1)
-    static let purple300             = #colorLiteral(red: 0.8431372549, green: 0.7960784314, blue: 0.9450980392, alpha: 1)
-    static let purple400             = #colorLiteral(red: 0.7647058824, green: 0.6980392157, blue: 0.9176470588, alpha: 1)
-    static let purple500             = #colorLiteral(red: 0.6862745098, green: 0.5960784314, blue: 0.8901960784, alpha: 1)
-    static let purple600             = #colorLiteral(red: 0.6078431373, green: 0.4941176471, blue: 0.862745098, alpha: 1)
-    static let purple700             = #colorLiteral(red: 0.4862745098, green: 0.3411764706, blue: 0.8078431373, alpha: 1)
-    static let purple800             = #colorLiteral(red: 0.368627451, green: 0.2039215686, blue: 0.7333333333, alpha: 1)
-    static let purple900             = #colorLiteral(red: 0.231372549, green: 0.07058823529, blue: 0.5921568627, alpha: 1)
+    static let purple100 = #colorLiteral(red: 0.9215686275, green: 0.8980392157, blue: 0.9725490196, alpha: 1)
+    static let purple200 = #colorLiteral(red: 0.8823529412, green: 0.8470588235, blue: 0.9607843137, alpha: 1)
+    static let purple300 = #colorLiteral(red: 0.8431372549, green: 0.7960784314, blue: 0.9450980392, alpha: 1)
+    static let purple400 = #colorLiteral(red: 0.7647058824, green: 0.6980392157, blue: 0.9176470588, alpha: 1)
+    static let purple500 = #colorLiteral(red: 0.6862745098, green: 0.5960784314, blue: 0.8901960784, alpha: 1)
+    static let purple600 = #colorLiteral(red: 0.6078431373, green: 0.4941176471, blue: 0.862745098, alpha: 1)
+    static let purple700 = #colorLiteral(red: 0.4862745098, green: 0.3411764706, blue: 0.8078431373, alpha: 1)
+    static let purple800 = #colorLiteral(red: 0.368627451, green: 0.2039215686, blue: 0.7333333333, alpha: 1)
+    static let purple900 = #colorLiteral(red: 0.231372549, green: 0.07058823529, blue: 0.5921568627, alpha: 1)
 }
 
 // MARK: - Blue
 public extension UIColor.FlexColor {
-    static let blue100               = #colorLiteral(red: 0.9568627451, green: 0.9921568627, blue: 1, alpha: 1)
-    static let blue200               = #colorLiteral(red: 0.7725490196, green: 0.8549019608, blue: 0.9254901961, alpha: 1)
-    static let blue300               = #colorLiteral(red: 0.6980392157, green: 0.8039215686, blue: 0.9019607843, alpha: 1)
-    static let blue400               = #colorLiteral(red: 0.6235294118, green: 0.7568627451, blue: 0.8745098039, alpha: 1)
-    static let blue500               = #colorLiteral(red: 0.5529411765, green: 0.7058823529, blue: 0.8470588235, alpha: 1)
-    static let blue600               = #colorLiteral(red: 0.4784313725, green: 0.6588235294, blue: 0.8196078431, alpha: 1)
-    static let blue700               = #colorLiteral(red: 0.4078431373, green: 0.6078431373, blue: 0.7921568627, alpha: 1)
-    static let blue800               = #colorLiteral(red: 0.3333333333, green: 0.5607843137, blue: 0.7647058824, alpha: 1)
-    static let blue900               = #colorLiteral(red: 0.262745098, green: 0.5098039216, blue: 0.737254902, alpha: 1)
+    static let blue100 = #colorLiteral(red: 0.9568627451, green: 0.9921568627, blue: 1, alpha: 1)
+    static let blue200 = #colorLiteral(red: 0.7725490196, green: 0.8549019608, blue: 0.9254901961, alpha: 1)
+    static let blue300 = #colorLiteral(red: 0.6980392157, green: 0.8039215686, blue: 0.9019607843, alpha: 1)
+    static let blue400 = #colorLiteral(red: 0.6235294118, green: 0.7568627451, blue: 0.8745098039, alpha: 1)
+    static let blue500 = #colorLiteral(red: 0.5529411765, green: 0.7058823529, blue: 0.8470588235, alpha: 1)
+    static let blue600 = #colorLiteral(red: 0.4784313725, green: 0.6588235294, blue: 0.8196078431, alpha: 1)
+    static let blue700 = #colorLiteral(red: 0.4078431373, green: 0.6078431373, blue: 0.7921568627, alpha: 1)
+    static let blue800 = #colorLiteral(red: 0.3333333333, green: 0.5607843137, blue: 0.7647058824, alpha: 1)
+    static let blue900 = #colorLiteral(red: 0.262745098, green: 0.5098039216, blue: 0.737254902, alpha: 1)
 }
 
 // MARK: - B&W Tones
 public extension UIColor.FlexColor {
-    static let black                 = #colorLiteral(red: 0.05490196078, green: 0.05490196078, blue: 0.05490196078, alpha: 1)
-    static let charcoalGray          = #colorLiteral(red: 0.3058823529, green: 0.3058823529, blue: 0.3058823529, alpha: 1)
-    static let graniteGray           = #colorLiteral(red: 0.4784313725, green: 0.4784313725, blue: 0.4784313725, alpha: 1)
-    static let gray                  = #colorLiteral(red: 0.6274509804, green: 0.6274509804, blue: 0.6274509804, alpha: 1)
-    static let lightGray             = #colorLiteral(red: 0.7764705882, green: 0.7764705882, blue: 0.7764705882, alpha: 1)
-    static let paleGray              = #colorLiteral(red: 0.8549019608, green: 0.8549019608, blue: 0.8549019608, alpha: 1)
-    static let snowWhite             = #colorLiteral(red: 0.9490196078, green: 0.9490196078, blue: 0.9490196078, alpha: 1)
-    static let offWhite              = #colorLiteral(red: 0.9882352941, green: 0.9882352941, blue: 0.9882352941, alpha: 1)
-    static let white                 = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    static let black = #colorLiteral(red: 0.05490196078, green: 0.05490196078, blue: 0.05490196078, alpha: 1)
+    static let charcoalGray = #colorLiteral(red: 0.3058823529, green: 0.3058823529, blue: 0.3058823529, alpha: 1)
+    static let graniteGray = #colorLiteral(red: 0.4784313725, green: 0.4784313725, blue: 0.4784313725, alpha: 1)
+    static let gray = #colorLiteral(red: 0.6274509804, green: 0.6274509804, blue: 0.6274509804, alpha: 1)
+    static let lightGray = #colorLiteral(red: 0.7764705882, green: 0.7764705882, blue: 0.7764705882, alpha: 1)
+    static let paleGray = #colorLiteral(red: 0.8549019608, green: 0.8549019608, blue: 0.8549019608, alpha: 1)
+    static let snowWhite = #colorLiteral(red: 0.9490196078, green: 0.9490196078, blue: 0.9490196078, alpha: 1)
+    static let offWhite = #colorLiteral(red: 0.9882352941, green: 0.9882352941, blue: 0.9882352941, alpha: 1)
+    static let white = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 }
 
 // MARK: - Turqoise Gray

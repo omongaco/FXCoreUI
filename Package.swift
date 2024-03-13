@@ -29,8 +29,7 @@ let package = Package(
                 "FXCore"
             ],
             resources: [
-                .process("Resources"),
-                .process("Fonts")
+                .process("Resources")
             ]),
         .testTarget(
             name: "FXCoreUITests",
