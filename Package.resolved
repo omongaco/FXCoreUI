@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "fxcore",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/omongaco/FXCore.git",
+      "state" : {
+        "revision" : "307e6e3434f8e0f4deb13d49130044f3f148ae45",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "localize-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/marmelroy/Localize-Swift.git",
+      "state" : {
+        "revision" : "0aa221fed0512772eaad04171d966b8d77b15212",
+        "version" : "3.2.0"
+      }
+    },
+    {
+      "identity" : "lottie-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/airbnb/lottie-spm.git",
+      "state" : {
+        "revision" : "1d29eccc24cc8b75bff9f6804155112c0ffc9605",
+        "version" : "4.4.3"
+      }
+    }
+  ],
+  "version" : 2
+}

@@ -9,10 +9,10 @@ import UIKit
 
 public extension UIImage {
     static func frameworkImage(named name: String) -> UIImage? {
-        return UIImage(named: name, in: Bundle.module, compatibleWith: nil)
+        return UIImage(named: name, in: Bundle.moduleBundle, compatibleWith: nil)
     }
     
     static func frameworkImageWithConfig(named name: String, config: SymbolConfiguration) -> UIImage? {
-        return UIImage(named: name, in: Bundle.module, with: config)
+        return UIImage(named: name, in: Bundle.moduleBundle, with: config)
     }
 }

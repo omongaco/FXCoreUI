@@ -9,7 +9,7 @@ import UIKit
 
 public class MenuCell: UITableViewCell {
     public static let identifier: String = String(describing: MenuCell.self)
-    public static let nib: UINib = UINib(nibName: identifier, bundle: Bundle.module)
+    public static let nib: UINib = UINib(nibName: identifier, bundle: Bundle.moduleBundle)
     
     @IBOutlet weak var leftIcon: UIImageView!
     @IBOutlet weak var title: UILabel!

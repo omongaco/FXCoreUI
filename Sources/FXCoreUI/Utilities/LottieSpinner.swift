@@ -22,7 +22,7 @@ class LottieSpinner: UIView {
         let lottieView = LottieAnimationView()
         let fullscreenSpinnerAnimation = LottieAnimation.named(
             "multi-shape-loader",
-            bundle: Bundle(for: LottieSpinner.self))
+            bundle: Bundle.moduleBundle)
         lottieView.animation = fullscreenSpinnerAnimation
         lottieView.loopMode = .loop
         return lottieView

@@ -9,7 +9,7 @@ import UIKit
 
 public class CoreUIUtility: NSObject {
     public static func registerFonts() {
-        let bundle: Bundle = Bundle.module
+        let bundle: Bundle = Bundle.moduleBundle
         guard let fontUrl = bundle.urls(forResourcesWithExtension: "ttf", subdirectory: nil) else { return }
         fontUrl.forEach { url in
             var error: Unmanaged<CFError>?

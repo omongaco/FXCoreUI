@@ -74,7 +74,7 @@ public extension UIView {
     
     func loadNib() -> UIView {
         guard let nibName = type(of: self).description().components(separatedBy: ".").last else { return UIView() }
-        let nib = UINib(nibName: nibName, bundle: Bundle.module)
+        let nib = UINib(nibName: nibName, bundle: Bundle.moduleBundle)
         return nib.instantiate(withOwner: self, options: nil).first as? UIView ?? UIView()
     }
     

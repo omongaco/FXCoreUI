@@ -58,7 +58,7 @@ public class CircularProgressView: UIView {
     }
     
     private func commonInit() {
-        if let nibView = Bundle.module.loadNibNamed(String(describing: CircularProgressView.self),
+        if let nibView = Bundle.moduleBundle.loadNibNamed(String(describing: CircularProgressView.self),
                                                   owner: self,
                                                   options: nil)?.first as? UIView {
             contentView = nibView
