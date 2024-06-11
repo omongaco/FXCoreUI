@@ -8,34 +8,43 @@
 import Foundation
 
 public extension Bundle {
-    // Function to get the bundle for a specific class
     static func classBundle(for class: AnyClass) -> Bundle {
         return Bundle(for: `class`.self)
     }
     
-    // Computed property to get the module bundle
     static var moduleBundle: Bundle = {
         let bundleName = "FXCoreUI"
         
-        // Candidates for the bundle URL
+        // Add debug logging
+        print("Searching for bundle named \(bundleName)")
+        
         let candidates = [
             Bundle.main.resourceURL,
             Bundle(for: BaseViewController.self).resourceURL,
             Bundle.main.bundleURL,
-            // This is an important addition for SPM
-            Bundle.module.resourceURL
+            Bundle.module.resourceURL // This is specific for SPM
         ]
         
         for candidate in candidates {
-            let bundlePath = candidate?.appendingPathComponent(bundleName + ".bundle")
-            if let bundle = bundlePath.flatMap(Bundle.init(url:)) {
-                return bundle
+            if let candidate = candidate {
+                let bundlePath = candidate.appendingPathComponent(bundleName + ".bundle")
+                print("Checking path: \(bundlePath)")
+                
+                if let bundle = Bundle(url: bundlePath) {
+                    print("Found bundle at \(bundlePath)")
+                    return bundle
+                }
             }
         }
         
         // Fallback: Trying to find the bundle within the module itself (SPM case)
-        if let bundle = Bundle.module.url(forResource: bundleName, withExtension: "bundle").flatMap(Bundle.init(url:)) {
-            return bundle
+        if let bundleURL = Bundle.module.url(forResource: bundleName, withExtension: "bundle") {
+            print("Checking module URL: \(bundleURL)")
+            
+            if let bundle = Bundle(url: bundleURL) {
+                print("Found bundle at module URL: \(bundleURL)")
+                return bundle
+            }
         }
         
         fatalError("unable to find bundle named \(bundleName)")
