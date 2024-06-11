@@ -37,6 +37,13 @@ public extension Bundle {
             }
         }
         
+        // Try with the module name prefix
+        if let modulePrefixedBundleURL = Bundle.module.resourceURL?.appendingPathComponent(bundleName + "_" + bundleName + ".bundle"),
+           let modulePrefixedBundle = Bundle(url: modulePrefixedBundleURL) {
+            print("Found bundle at module-prefixed URL: \(modulePrefixedBundleURL)")
+            return modulePrefixedBundle
+        }
+        
         // Fallback: Trying to find the bundle within the module itself (SPM case)
         if let bundleURL = Bundle.module.url(forResource: bundleName, withExtension: "bundle") {
             print("Checking module URL: \(bundleURL)")
