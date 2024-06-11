@@ -23,13 +23,9 @@ public extension Bundle {
         ]
         
         for candidate in candidates {
-            if let candidate = candidate {
-                print("Checking candidate path: \(candidate)")
-                let bundlePath = candidate.appendingPathComponent(bundleName + ".bundle")
-                print("Checking path: \(bundlePath)")
-                
-                if let bundle = Bundle(url: bundlePath) {
-                    print("Found bundle at \(bundlePath)")
+            if let candidatePath = candidate {
+                if let bundle = Bundle(url: candidatePath) {
+                    print("Found bundle at \(candidatePath)")
                     return bundle
                 }
             }
