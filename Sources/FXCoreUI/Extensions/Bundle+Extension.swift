@@ -15,9 +15,6 @@ public extension Bundle {
     static var moduleBundle: Bundle = {
         let bundleName = "FXCoreUI"
         
-        // Add debug logging
-        print("Searching for bundle named \(bundleName)")
-        
         let candidates = [
             Bundle.main.resourceURL,
             Bundle(for: BaseViewController.self).resourceURL,
@@ -27,6 +24,7 @@ public extension Bundle {
         
         for candidate in candidates {
             if let candidate = candidate {
+                print("Checking candidate path: \(candidate)")
                 let bundlePath = candidate.appendingPathComponent(bundleName + ".bundle")
                 print("Checking path: \(bundlePath)")
                 
@@ -34,23 +32,6 @@ public extension Bundle {
                     print("Found bundle at \(bundlePath)")
                     return bundle
                 }
-            }
-        }
-        
-        // Try with the module name prefix
-        if let modulePrefixedBundleURL = Bundle.module.resourceURL?.appendingPathComponent(bundleName + "_" + bundleName + ".bundle"),
-           let modulePrefixedBundle = Bundle(url: modulePrefixedBundleURL) {
-            print("Found bundle at module-prefixed URL: \(modulePrefixedBundleURL)")
-            return modulePrefixedBundle
-        }
-        
-        // Fallback: Trying to find the bundle within the module itself (SPM case)
-        if let bundleURL = Bundle.module.url(forResource: bundleName, withExtension: "bundle") {
-            print("Checking module URL: \(bundleURL)")
-            
-            if let bundle = Bundle(url: bundleURL) {
-                print("Found bundle at module URL: \(bundleURL)")
-                return bundle
             }
         }
         
